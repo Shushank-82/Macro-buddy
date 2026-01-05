@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fitness Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Fitness Calculator</h1>
+
+<div class="card">
+
+  <input type="number" id="age" placeholder="Age">
+  <input type="number" id="weight" placeholder="Weight (kg)">
+  <input type="number" id="height" placeholder="Height (cm)">
+
+  <select id="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+
+  <select id="activity">
+    <option value="1.2">Sedentary</option>
+    <option value="1.55">Moderate</option>
+    <option value="1.75">Active</option>
+  </select>
+
+  <div class="goal-wrapper">
+    <div class="goal-label">Fat Loss</div>
+
+    <div class="slider-container">
+      <input type="range" min="0" max="2" step="1" value="1" id="goal" class="goal-slider">
+      <div class="slider-ticks">
+        <span>●</span>
+        <span>●</span>
+        <span>●</span>
+      </div>
+    </div>
+
+    <div class="goal-label">Muscle Gain</div>
+  </div>
+
+  <div class="goal-text" id="goalText">Maintain</div>
+
+  <button onclick="calculate()">Calculate</button>
+</div>
+
+<!-- Result panel -->
+<div class="result" id="result">
+  <h3>Results</h3>
+  <p>BMI: --</p>
+  <p>Calories: -- kcal/day</p>
+  <p>Protein: -- g/day</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
